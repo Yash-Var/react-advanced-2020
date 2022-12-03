@@ -1,16 +1,19 @@
-import React,{useState} from 'react';
+import React, { useState } from "react";
 
 const ErrorExample = () => {
-  let title='random title';
-  const [Title,setTitle]=useState(title);
-  const handleClick=()=>{
-    setTitle="ram varshney";
-  }
+  let title = "random title";
+  const [Title, setTitle] = useState(title);
+  const handleClick = () => {
+    if (Title === "random title") setTitle("ram varshney");
+    else setTitle("random title");
+  };
   return (
-<>
-  <h2>{title}</h2>
-  <button type='button' className='btn' onClick={handleClick}>Change Title</button>
-</>
+    <>
+      <h2>{Title}</h2>
+      <button type="button" className="btn" onClick={handleClick}>
+        Change Title
+      </button>
+    </>
   );
 };
 
